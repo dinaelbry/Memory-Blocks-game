@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Memory Game</title>
+  </head>
+  <body>
+    <div class="control-btn">
+      <span id="startGameBtn">Start Game</span>
+    </div>
+
+    <!-- user name box -->
+    <div id="nameBox" class="name-box" style="display: none">
+      <div class="name-card">
+        <h2>Enter Your name</h2>
+        <input type="text" id="playerName" placeholder="Your name" />
+        <button id="startBtn">Start</button>
+      </div>
+    </div>
+
+    <div class="info-container">
+      <div class="info">
+        <div class="name"><span></span></div>
+        <div class="tries">wrong: <span>0</span></div>
+      </div>
+      <div class="ctrl-btn">
+        <button id="restartGame" title="Restart Game First" disabled>
+          <i class="fa-solid fa-rotate-right"></i>
+        </button>
+        <button id="pauseBtn" title="Pause Game">
+          <i class="fa-solid fa-pause"></i>
+        </button>
+        <button id="darkMode" title="Change Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="leaderboardBtn" title="Show Leaderboard">
+          <i class="fa-solid fa-trophy"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="memory-game-blocks">
+      <div class="game-block" data-tech="one">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="one">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img1.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="game-block" data-tech="two">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="two">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="game-block" data-tech="three">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="three">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="game-block" data-tech="four">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img4.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="four">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img4.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="five">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img5.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="five">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img5.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="six">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img6.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="six">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img6.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="seven">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img7.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="seven">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img7.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="eight">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img8.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="eight">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img8.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="nine">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img9.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="nine">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img9.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- <div class="game-block" data-tech="ten">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img10.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="game-block" data-tech="ten">
+        <div class="block-inner">
+          <div class="face front"></div>
+          <div class="face back">
+            <img src="img/img10.jpg" alt="" />
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- custom alert -->
+    <div class="custom-alert" id="gameAlert">
+      <div class="alert-box">
+        <h2 id="alertTitle"></h2>
+        <p id="alertMsg"></p>
+        <button id="alertBtn">OK</button>
+      </div>
+    </div>
+    <!-- overlay -->
+    <div id="pauseOverlay" class="pause-overlay">
+      <div class="pause-box">
+        <h2>Game Paused</h2>
+        <button id="resumeBtn">Resume</button>
+      </div>
+    </div>
+
+    <!-- winscreen -->
+    <!-- winscreen -->
+    <div id="winScreen" class="win-screen">
+      <div class="win-box">
+        <h1>
+          Congrats
+          <i
+            class="fa-solid fa-wand-sparkles"
+            style="font-size: 50px; margin-left: 15px"
+          ></i>
+        </h1>
+        <div class="win-medal">
+          <i class="fa-solid fa-medal" style="font-size: 80px"></i>
+        </div>
+        <div id="winStats" class="win-stats"></div>
+        <div class="win-buttons">
+          <button id="tryAgainBtn">
+            <i class="fa-solid fa-rotate-right" style="color: white"></i> Try
+            again
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- leaderboard overlay -->
+    <div id="leaderboardOverlay" class="leaderboard-overlay">
+      <div class="leaderboard-box">
+        <h2>leaderboard</h2>
+        <div class="container">
+          <div class="last-player">
+            <h3>Last Player</h3>
+            <div id="lastPlayer"></div>
+          </div>
+          <div class="top-players">
+            <h3>Top 5 Player</h3>
+            <div id="topPlayers"></div>
+          </div>
+        </div>
+        <button id="closeLeaderboard">Close</button>
+      </div>
+    </div>
+
+    <!-- audios -->
+    <audio id="success" src="assets/successed.mp3" preload="auto"></audio>
+    <audio id="fail" src="assets/error.mp3" preload="auto"></audio>
+    <script src="main.js"></script>
+  </body>
+</html>
