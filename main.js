@@ -235,7 +235,7 @@ function flipBlock(selectedBlock) {
   // collect all fliped cards
   let flippedBlocks = blocks.filter(
     (b) =>
-      b.classList.contains("is-flipped") && !b.classList.contains("has-match")
+      b.classList.contains("is-flipped") && !b.classList.contains("has-match"),
   );
 
   // if there is two selected blocks
@@ -386,7 +386,7 @@ blocks.forEach((block) => {
 // ====================
 function saveToLeaderboard(name, score, time, errors) {
   let leaderboard = JSON.parse(
-    localStorage.getItem("memoryLeaderboard") || "[]"
+    localStorage.getItem("memoryLeaderboard") || "[]",
   );
 
   leaderboard.push({
@@ -406,7 +406,7 @@ function saveToLeaderboard(name, score, time, errors) {
 function showLeaderboard() {
   if (!leaderboardOverlay) return;
   const leaderboard = JSON.parse(
-    localStorage.getItem("memoryLeaderboard") || "[]"
+    localStorage.getItem("memoryLeaderboard") || "[]",
   );
   if (leaderboard.length === 0) {
     lastPlayerDiv.innerHTML = "<p>No players yet!</p>";
