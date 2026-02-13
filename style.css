@@ -187,7 +187,7 @@ button {
 .control-btn span {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 35%;
   transform: translate(-50%, -50%);
   color: white;
   background-color: #f44336;
@@ -260,9 +260,9 @@ button {
   }
 
   .memory-game-blocks .game-block {
-    flex: 1 1 180px;
-    max-width: 185px;
-    height: 170px;
+    flex: 1 1 100px;
+    max-width: 120px;
+    height: 120px;
   }
 }
 
@@ -272,9 +272,9 @@ button {
   }
 
   .memory-game-blocks .game-block {
-    flex: 1 1 110px;
-    max-width: 150px;
-    height: 130px;
+    flex: 1 1 60px;
+    max-width: 80px;
+    height: 70px;
   }
 }
 
@@ -341,21 +341,21 @@ button {
 }
 @media (max-width: 768px) {
   .memory-game-blocks .game-block .front::before {
-    font-size: 100px;
+    font-size: 80px;
   }
   .memory-game-blocks .game-block .back img {
-    width: 162px;
-    height: 152px;
-    margin: 5px;
+    width: 95px;
+    height: 105px;
+    margin: 2px;
   }
 }
 @media (max-width: 480px) {
   .memory-game-blocks .game-block .front::before {
-    font-size: 90px;
+    font-size: 40px;
   }
   .memory-game-blocks .game-block .back img {
-    width: 110px;
-    height: 112px;
+    width: 58px;
+    height: 56px;
     margin: 3px;
   }
 }
@@ -1081,5 +1081,78 @@ button {
 
   #leaderboardBtn {
     font-size: 22px;
+  }
+}
+
+/*  footer */
+footer {
+  background: #fff;
+  padding: 3px 0;
+  margin-top: 12px auto;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  border-top: 2px solid #eee;
+}
+.footer {
+  text-align: center;
+  margin: 0 auto;
+  padding: 3px 20px;
+  max-width: 1200px;
+}
+.footer p {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+.footer span {
+  font-weight: bold;
+  color: #0075ff;
+}
+.footer i {
+  color: #0075ff;
+}
+
+.dark footer {
+  background: #222;
+  border-color: #555;
+}
+.dark .footer span {
+  font-weight: bold;
+  color: #64c864;
+}
+.dark .footer i {
+  color: #64c864;
+}
+.dark .footer p {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 5px 0;
+    margin-top: 15px auto;
+  }
+  .footer {
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  .footer p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    padding: 3px 0;
+    margin-top: 5px auto;
+  }
+  .footer {
+    margin: 0 auto;
+    padding: 5px 20px;
+  }
+  .footer p {
+    font-size: 10px;
   }
 }

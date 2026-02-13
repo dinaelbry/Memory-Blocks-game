@@ -212,7 +212,7 @@ function startGameLogic() {
     // start timer game
     startTime = Date.now();
     gameState = "playing";
-  }, 3000);
+  }, 5000);
 }
 
 // =======================
@@ -265,7 +265,7 @@ function checkMatchedBlock(firstBlock, secondBlock) {
       // allow click after matched
       blocksContainer.classList.remove("no-clicking");
       checkIfWin();
-    }, 800);
+    }, 900);
   } else {
     // increase counter element or tries
     triesElement.textContent = parseInt(triesElement.textContent) + 1;
@@ -366,7 +366,7 @@ function restartGame() {
     blocksContainer.classList.remove("no-clicking");
     startTime = Date.now();
     gameState = "playing";
-  }, 3000);
+  }, 5000);
 }
 
 // ====================
